@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Renato Silveira",
+      "email": "renato@renato.com",
+      "RA": "23213",
+      "photo": "foto.com",
+      "contact": "123"
+    }
+  ],
+  "registrationRequests": [
+    {
+      "id": "1",
+      "approverId": "1",
+      "userId": "1",
+      "approved": true
+    }
+  ],
+  "news": [
+    {
+      "title": "Noticia do dia",
+      "subtitle": "Noticia do dia",
+      "extraLink": "dasdadas.com",
+      "description": "Noticia do dia",
+      "campus": "poços",
+      "author": "Noticia do dia",
+      "photos": [
+        "renato@renato.com",
+        "renato@renato2.com"
+      ],
+      "createdAt": "23/12/2021"
+    }
+  ],
+  "projects": [
+    {
+      "id": "323123",
+      "title": "Projeto 1",
+      "extraLink": "dasdadas.com",
+      "description": "Noticia do projeto 1",
+      "author": "Renato Silveira",
+      "campus": "machado",
+      "photos": [
+        "renato@renato.com",
+        "renato@renato2.com"
+      ],
+      "createdAt": "23/12/2021",
+      "startedAt": "23/12/2021",
+      "finishedAt": "23/12/2021"
+    }
+  ],
+  "postRequests": [
+    {
+      "id": "wdasds",
+      "authorName": "Renato",
+      "authorRA": "312213",
+      "newsId": "1",
+      "projectId": "",
+      "approverId": "1",
+      "approved": true
+    }
+  ]
+}
