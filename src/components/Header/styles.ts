@@ -4,17 +4,6 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  background: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'space-evenly',
-    alignItems: 'center'
-  },
-  header: {
     width: '95%',
     height: 64,
     backgroundColor: theme.colors.darkGreen,
@@ -26,14 +15,9 @@ export const styles = StyleSheet.create({
     marginBottom: 5,
     borderRadius: 8
   },
-  headerTitle: {
+  title: {
     color: theme.colors.highlight,
     fontSize: 16,
     fontFamily: theme.fonts.title700
   },
-  cardList: {
-    width: '100%',
-    marginLeft: 20,
-    marginTop: 10
-  }
 });
