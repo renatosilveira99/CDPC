@@ -12,9 +12,10 @@ import { theme } from '../../global/styles/theme';
 
 export type HeaderProps = {
   isAdmin: boolean
+  title: string;
 }
 
-export function Header({ isAdmin }: HeaderProps) {
+export function Header({ isAdmin, title }: HeaderProps) {
   return (
     <View style={styles.container}>
       <TouchableOpacity>
@@ -26,7 +27,7 @@ export function Header({ isAdmin }: HeaderProps) {
       </TouchableOpacity>
 
       <Text style={styles.title}>
-        Principais notícias e projetos
+        { title }
       </Text>
 
       <Feather

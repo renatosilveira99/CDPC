@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native'
 
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 import { styles } from './styles'
 
@@ -18,7 +18,7 @@ export type CardProps = {
   type: string;
 }
 
-export function Card({uri, title, author, date, type}: CardProps) {
+export function Card({uri, title, author, date, type}: CardProps)  {
   return (
     <TouchableOpacity activeOpacity={0.7} style={type === 'news' ? styles.newsContainer : styles.projectContainer}>
       <View style={styles.imageContainer}>

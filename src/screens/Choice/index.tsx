@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View, Text, ImageBackground } from 'react-native';
+import { View, ImageBackground } from 'react-native';
 
 import backgroundImage from '../../assets/background.png'
 import { Button } from "../../components/Button";

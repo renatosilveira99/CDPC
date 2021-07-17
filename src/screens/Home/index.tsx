@@ -1,11 +1,9 @@
 
 import React from "react";
-import { View, ImageBackground, FlatList, Text, TouchableOpacity } from 'react-native';
+import { View, ImageBackground, FlatList } from 'react-native';
 import backgroundImage from '../../assets/background.png';
-import { Feather } from '@expo/vector-icons'
 import { styles } from './styles';
 import { Card, CardProps } from "../../components/Card";
-import { theme } from "../../global/styles/theme";
 import { Header } from "../../components/Header";
 
 export function Home() {
@@ -42,7 +40,7 @@ export function Home() {
     <View style={container}>
     <ImageBackground source={backgroundImage} resizeMode="cover" style={background}>
 
-    <Header isAdmin={false}/>
+    <Header isAdmin={false} title={"Principais notícias e projetos"}/>
 
     <FlatList
         data={data}
