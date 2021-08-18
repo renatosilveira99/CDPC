@@ -3,8 +3,8 @@ import {
   Text,
   View,
 } from 'react-native'
-import {Feather} from '@expo/vector-icons'
-
+import { Feather } from '@expo/vector-icons'
+import { useNavigation, DrawerActions } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import { styles } from './styles'
@@ -16,18 +16,21 @@ export type HeaderProps = {
 }
 
 export function Header({ isAdmin, title }: HeaderProps) {
+
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
-      <Feather
-        name='menu'
-        size={40}
-        color={theme.colors.highlight}
-      />
+      <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
+        <Feather
+          name='menu'
+          size={40}
+          color={theme.colors.highlight}
+        />
       </TouchableOpacity>
 
       <Text style={styles.title}>
-        { title }
+        {title}
       </Text>
 
       <Feather

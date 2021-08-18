@@ -15,11 +15,20 @@ export function Choice() {
   function handleNavigateToHome() {
     navigation.navigate('Home')
   }
+
+  function handleNavigateToLogin() {
+    navigation.navigate('Login')
+  }
+
+  function handleNavigateToSignUp() {
+    navigation.navigate('SignUp')
+  }
+
   return (
     <View style={container}>
       <ImageBackground source={backgroundImage} resizeMode="cover" style={background}>
         <Button title={"Acessar como leitor"} onPress={handleNavigateToHome}/>
-        <Button title={"Acessar como administrador"} />
+        <Button title={"Acessar como administrador"} onPress={handleNavigateToLogin}/>
         <Button title={"Cadastrar como administrador"} />
       </ImageBackground>
     </View>

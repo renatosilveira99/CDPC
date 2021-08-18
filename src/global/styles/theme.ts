@@ -14,6 +14,7 @@ export const theme = {
     highlight: '#FFFFFF',
     heading: '#4F4F4F',
     red: '#991F36',
+    black: '#111',
   },
 
   fonts: {
