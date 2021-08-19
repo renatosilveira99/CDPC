@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
-import { Feather } from '@expo/vector-icons'
+import { Feather, AntDesign } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
 import {
   Container,
@@ -28,17 +28,17 @@ const SideBar: React.FC<SidebarProps> = ({ ...props }) => {
           <ButtonText>CONFIGURAÇÕES</ButtonText>
           <Feather
             name='user'
-            size={40}
-            color={theme.colors.highlight}
+            size={25}
+            color={theme.colors.black}
           />
         </Button>
         <Line />
         <Button onPress={() => handleSignOut()}>
           <ButtonText>SAIR DA CONTA</ButtonText>
-          <Feather
-            name='user'
-            size={40}
-            color={theme.colors.highlight}
+          <AntDesign
+            name="logout"
+            size={24}
+            color="black"
           />
         </Button>
         <Line />
