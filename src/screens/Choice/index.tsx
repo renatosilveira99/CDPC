@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import * as React from "react";
 import { View, ImageBackground } from 'react-native';
 
 import backgroundImage from '../../assets/background.png'
@@ -20,8 +20,8 @@ export function Choice() {
     navigation.navigate('Login')
   }
 
-  function handleNavigateToSignUp() {
-    navigation.navigate('SignUp')
+  function handleNavigateToRegister() {
+    navigation.navigate('Register')
   }
 
   return (
@@ -29,7 +29,7 @@ export function Choice() {
       <ImageBackground source={backgroundImage} resizeMode="cover" style={background}>
         <Button title={"Acessar como leitor"} onPress={handleNavigateToHome}/>
         <Button title={"Acessar como administrador"} onPress={handleNavigateToLogin}/>
-        <Button title={"Cadastrar como administrador"} />
+        <Button title={"Cadastrar como administrador"} onPress={handleNavigateToRegister}/>
       </ImageBackground>
     </View>
   )

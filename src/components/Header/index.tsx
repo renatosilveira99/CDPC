@@ -13,31 +13,37 @@ import { theme } from '../../global/styles/theme';
 export type HeaderProps = {
   isAdmin: boolean
   title: string;
+  campus: string
 }
 
-export function Header({ isAdmin, title }: HeaderProps) {
+export function Header({ isAdmin, title, campus }: HeaderProps) {
 
   const navigation = useNavigation();
 
   return (
+    <>
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
+        <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
+          <Feather
+            name='menu'
+            size={40}
+            color={theme.colors.highlight}
+          />
+        </TouchableOpacity>
+
+        <Text style={styles.title}>
+          {title}
+        </Text>
+
         <Feather
-          name='menu'
+          name='user'
           size={40}
-          color={theme.colors.highlight}
+          color={isAdmin ? theme.colors.highlight : 'transparent'}
         />
-      </TouchableOpacity>
-
-      <Text style={styles.title}>
-        {title}
-      </Text>
-
-      <Feather
-        name='user'
-        size={40}
-        color={isAdmin ? theme.colors.highlight : 'transparent'}
-      />
-    </View>
+      </View>
+        <View>
+        <Text>{campus}</Text>
+      </View>
+    </>
   )
 }

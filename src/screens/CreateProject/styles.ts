@@ -32,7 +32,7 @@ export const Content = styled.View`
 export const Section = styled.View`
   width: 100%;
   height: 100%;
-  max-height: 400px;
+  max-height: 650px;
   align-items: center;
   justify-content: space-around;
   padding: 10px 20px;

@@ -40,7 +40,7 @@ export function Home() {
     <View style={container}>
     <ImageBackground source={backgroundImage} resizeMode="cover" style={background}>
 
-    <Header isAdmin={false} title={"Principais notícias e projetos"}/>
+    <Header isAdmin={false} title={"Principais notícias e projetos"} campus={"Poços de Caldas"}/>
 
     <FlatList
         data={data}

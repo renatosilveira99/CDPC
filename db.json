@@ -6,7 +6,8 @@
       "email": "renato@renato.com",
       "RA": "23213",
       "photo": "foto.com",
-      "contact": "123"
+      "contact": "123",
+      "password": "123"
     }
   ],
   "registrationRequests": [

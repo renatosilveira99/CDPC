@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {
   Text,
@@ -19,8 +20,9 @@ export type CardProps = {
 }
 
 export function Card({uri, title, author, date, type}: CardProps)  {
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity activeOpacity={0.7} style={type === 'news' ? styles.newsContainer : styles.projectContainer}>
+    <TouchableOpacity activeOpacity={0.7} style={type === 'news' ? styles.newsContainer : styles.projectContainer} onPress={() => navigation.navigate('Details')}>
       <View style={styles.imageContainer}>
         <Image source={{uri}} style={styles.image} resizeMode='cover'/>
       </View>

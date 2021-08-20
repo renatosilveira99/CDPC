@@ -1,5 +1,6 @@
-import * as React from 'react';
-import { useCallback } from 'react';
+import React, {
+  useCallback
+} from 'react';
 import {
   SafeAreaView
 } from 'react-native';
@@ -18,15 +19,13 @@ import { useAuth } from '../../hooks/auth';
 import Input from '../../components/Input'
 import { Button } from '../../components/Button'
 
-const SignIn: React.FC = () => {
+const CreateNews: React.FC = () => {
   const navigation = useNavigation();
-  const handleSignIn = useCallback(() => {
-
-  }, []);
 
   function handleNavigateToHome() {
     navigation.navigate('Home')
   }
+
 
   return (
     <SafeAreaView
@@ -44,9 +43,14 @@ const SignIn: React.FC = () => {
           </Header>
           <Content>
             <Section>
-              <Input labelText={"Email"} />
-              <Input labelText={"Senha"} />
-              <Button title={"Fazer login"} onPress={handleNavigateToHome} />
+              <Input labelText={"Título"} />
+              <Input labelText={"Link"} />
+              <Input labelText={"Descrição"} />
+              <Input labelText={"Autor"} />
+              <Input labelText={"Campus"} />
+              <Input labelText={"Foto"} />
+
+              <Button title={"Solicitar divulgação"} onPress={handleNavigateToHome} />
             </Section>
           </Content>
         </Container>
@@ -55,5 +59,5 @@ const SignIn: React.FC = () => {
   );
 };
 
-export default SignIn;
+export default CreateNews;
 

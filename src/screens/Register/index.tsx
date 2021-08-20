@@ -1,5 +1,6 @@
-import * as React from 'react';
-import { useCallback } from 'react';
+import React, {
+  useCallback
+} from 'react';
 import {
   SafeAreaView
 } from 'react-native';
@@ -20,13 +21,11 @@ import { Button } from '../../components/Button'
 
 const SignIn: React.FC = () => {
   const navigation = useNavigation();
-  const handleSignIn = useCallback(() => {
 
-  }, []);
-
-  function handleNavigateToHome() {
-    navigation.navigate('Home')
+  function handleNavigateToChoice() {
+    navigation.navigate('Choice')
   }
+
 
   return (
     <SafeAreaView
@@ -44,9 +43,13 @@ const SignIn: React.FC = () => {
           </Header>
           <Content>
             <Section>
+              <Input labelText={"Nome"} />
               <Input labelText={"Email"} />
+              <Input labelText={"RA"} />
+              <Input labelText={"Foto"} />
+              <Input labelText={"Contato"} />
               <Input labelText={"Senha"} />
-              <Button title={"Fazer login"} onPress={handleNavigateToHome} />
+              <Button title={"Cadastrar"} onPress={handleNavigateToChoice} />
             </Section>
           </Content>
         </Container>
